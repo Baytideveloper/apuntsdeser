@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptes bàsics</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+        p {
+            color: white;
+            margin-left:1%;}
+        .verde{
+            color:greenyellow;
+            }
+        .rojo{
+            color:red;}
+
+        h1 {
+            color: white;
+            margin-left:1%;}
+        h2 {
+            color: white;
+            margin-left:2%;}
+        h3{
+            color: black;
+            margin-left:2%;}
+
+        div {
+            border-width: 1px;
+            border-style: solid;
+            border-color: white;
+            margin-left:5%;
+            margin-right:5%;
+            margin-bottom:1%;
+            background-color: none;}
+        .blanco{
+            margin-left:5%;
+            margin-right:5%;
+            margin-bottom:1%;
+            background-color: white;}
+        span{
+            color:white;}
+        ol {
+            color: black;}
+            ul{
+            margin-left: 3%;
+            color:black;}
+
+            header{
+            background-color:white;
+            margin-top: 0%;
+            margin-left:0%;
+            margin-right:0%;
+            padding-top: 1%;
+            padding-left:1%;
+            padding-bottom:1%;}
+        
+            a{
+            color:black;}
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="ser_index.html">Inici</a>
+    </header>
+    <h1>Conceptes bàsics sobre els servici en red</h1>
+    <h2>Qué es un servici en red?</h2>
+    <div>
+        <p>És una <strong>aplicació que pertany al servidor</strong> i s'activa per a "desbloquejar" una funció. Tenen com a proposit <strong>facilitar l'administració</strong> dels usuaris i informació de la red on es trove el servidor.</p>
+        <p>Es necessiten normes, anomenades protocols (Protocol DNS // Protocol HTTP // Protocol DHCP)</p>
+    </div>
+    <h2>Estructures</h2>
+    <div class="blanco">
+        <h3>Peer to Peer</h3>
+        <ol>Tots els equips:</ol>
+            <ul>⇲Tienen la mateixa funció.</ul>
+            <ul>⇲Comparteixen els seus recursos amb la resta d'equips.</ul>
+            <ul>⇲Els equips tenen el mateix hardware.</ul>
+        <ol>Els permisos no estan centralitzats.</ol>
+        <ol>Està pensat per a reds menudes.</ol>
+        <h3>Client-Servidor:</h3>
+        <ol>1 Equip amb hardware més potent que la resta (Servidor).</ol>
+        <ol>El servidor té un software diferent instal·lat que li permet sentir als clients.</ol>
+        <ol>Permisos centralitzats (amb un usuari especific pots accedir i modificar tots els recursos).</ol>
+    </div>
+    <h2>Estructura de les IP</h2>
+    <div>
+        <p>IP d'exemple: 192.168.100.100</p>
+        <p>Combinacions més comuns:</p><span class="rojo">Red</span><span class="verde"> Dispositiu</span><span> Màscara</span>
+        <br>
+        <br>
+        <span class="rojo">192</span><span class="verde">.168.100.100</span><span> /8</span>
+        <br>
+        <span class="rojo">192.168</span><span class="verde">.100.100</span><span> /16</span>
+        <br>
+        <span class="rojo">192.168.100</span><span class="verde">.100</span><span> /24</span>
+        
+    </div>
+    
+</body>
+</html>

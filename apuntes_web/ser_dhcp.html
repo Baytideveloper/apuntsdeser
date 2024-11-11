@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHCP APUNTES</title>
+    <link rel="stylesheet" type="text" href="./ser_dhcp.css">
+    <style>
+        body {
+            background-color: rgb(10.148% 10.813% 66.788%);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        p {
+            color: rgb(10.148% 10.813% 66.788%);
+            margin-left:1%;
+        }
+
+        h1 {
+            color: rgb(51.306% 96.477% 76.344%);
+            margin-left:1%;
+        }
+
+        h2 {
+            color: rgb(51.306% 96.477% 76.344%);
+            margin-left:2%;
+        }
+        h3{
+            color: rgb(51.306% 96.477% 76.344%);
+            margin-left:2%; 
+        }
+
+        div {
+            border: 1px solid rgb(51.306% 96.477% 76.344%);
+            border-radius: 0px;
+            margin-left:5%;
+            margin-right:5%;
+            margin-bottom:1%;
+            background-color: rgb(51.306% 96.477% 76.344%);
+        }
+
+        ol {
+            color: rgb(10.148% 10.813% 66.788%);
+        }
+        header{
+            background-color:rgb(51.306% 96.477% 76.344%) ;
+            margin-top: 0%;
+            margin-left:0%;
+            margin-right:0%;
+            padding-top: 1%;
+            padding-left:1%;
+            padding-bottom:1%;
+        }
+        a{
+            color:rgb(10.148% 10.813% 66.788%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="ser_index.html">Inici</a>
+    </header>
+    <h1>DHCP</h1>
+    <h2>“Dynamic Host Configuration Protocol”:</h2>
+    <div>
+        <ul>
+            <ol>És un protocol client-servidor que proporciona automáticament a un equip la informació necessària per tal qie
+            es aquest puga accedir a una xarxa del tius TCP/IP. Es basa en l’us del protocol BOOTP (“Bootstrap
+            Protocol”). Format per dos elements:</ol>
+            <br>
+            <ol>-Un protocol encarregat de que un servidor DHCP puga entregar la configuració de xarxa requierida per un
+            equip client.</ol>
+            <br>
+            <ol>-Un mecanisme d’assignació de direccions de xarxa a equips.</ol>
+        </ul>
+    </div>
+
+    <h2>El DHCP permet</h2>
+    <div>
+        <ul>
+            <ol>1-Enviar automàticament informació de xarxa que necessita cada client per a connectar-se</ol>
+            <br>
+            <ol>2-Configuració segura i lliure d'errades</ol>
+            <br>
+            <ol>2-Configuració de client de xarxa centralitzada</ol>
+        </ul>
+    </div>
+    <div>
+        <p>Sense el servei DHCP, la configuració de la xarxa s'hauria de fer de manera manual (podent-hi introduir
+            direccions IP no válides) i no hi hauria resposta a les peticions BOOTP. A més a més, els canvis d'ubicació
+            o
+            hardware impicarien una major càrrega de treball de l'administrador</p>
+    </div>
+
+    <h2>Modes d'assignació de direccions IP</h2>
+    <div>
+        <ul>
+            <ol>1-Assignació dinàmica i limitada: S'assigna una direcció IP durant un interval de temps limitat. El
+                servidor retornarà la mateixa direcció añ client que solicite la seua configuració durant un període de
+                temps. Quan s'acane el temps, el servidor podrà, o bé, ampliar el termini de la mateixa direcció, o bé,
+                assifnar-ne una nova.</ol>
+            <br>
+            <ol>2-Assignació Automàtica i ilimitada: ofereix una direcció IP de manera permanent. Bona opció per a
+                entorns SOHO quan hi ha pocs clients.</ol>
+            <br>
+            <ol>3-Assignació estàtica amb reserva: l'assignació la realitza l'administrador de la xarxa i per tant,
+                requereix més temps de configuració perquè cada direcció es reserva a un únic client. Utilitza la
+                parella (direcció IP, direcció MAC). Així, s'assegura que només el clients identificats podem rebre una
+                direcció</ol>
+        </ul>
+    </div>
+    
+    <h3>Un protocol DHCP ofereix a un client la informació necessaria per a ser configurat i poder connectar-se a una xarxa TCP/IP i poder eixir a internet:</h3>
+        <div>    
+        <ol>
+            <ul>1-Direcció IP: Identificador que li permet ser reconegut de manera única en Internet o en un intranet.</ul>
+            <ul>2-Màscara de subxarxa:_Per tal de conéixer la part de la direcció IP que descriu la xarxa o la subxarxa on es troba l'equip i l'altra part que identifica l'equip.</ul>
+            <ul>3-Direcció IP de la porta d'enllaç (o passarel·la) usada per defecte: es correspon amb el router que permetrà encaminar el tràfic.</ul>
+            <ul>4-Direccions IP dels servidore DNS: Encarregats de resoldre o traduir els noms de dominis isats en Internet en la seua corresponent IP. Així s'evita que l'usuari haja de conéixer ñes direccións IP dels equips als que desitja accedir.</ul>
+        </ol>
+        <p>A més a més, el protocol DHCP també ofereix al client el com o sufixe del domini DNS.</p>
+    </div>
+    <h3>Assignació de IP</h3>
+    <div class="cliente">
+        
+        <img style="margin-left: 25%;" width=800px src="./img/ser_dhcp_asignacionip.png">
+    </div>
+    <h3>Servidor autoritzat</h3>
+    <div>
+        <p>Es recomanable que no hi haja més de <STRONG>un servidor DHCP</STRONG>, peró, en el cas de que hi hagueren dos, al instal·lar lo només s'hauría de autoritzar 1 per a que aquest fera la tasca del servidor DHCP, del contrari, hi haurien <STRONG>conflictes</STRONG></p>
+    </div>
+    <h3>Configuració sense servidor DHCP</h3>
+    <div>
+        <p>Apareix quan no funciona el servidor dhcp o el switch el client no rep la ip del servidor i activa el protocol <STRONG>APIPA</STRONG></p>
+    </div>
+    <div>
+        <p>Este protocol assigna IPs e el rango <STRONG>169.254.0.1-169.254.255.254</STRONG></p>
+        <p>De la xarxa <STRONG>169.254.0.0/16</STRONG> Este rango de IP esta reservat</p>
+    </div>
+    <h3>Agent de transmisió DHCP</h3>
+    <div>
+        <ol>S'utilitza en xarxes separades per routers</ol>
+        <ol>El servidor DHCP està en una subred</ol>
+        <ol>Hem de configurar el router per a que puga retransmetre els missatges DHCPXXX</ol>
+    </div>
+</body>
+
+</html>
